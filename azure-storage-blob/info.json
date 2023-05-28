@@ -25,13 +25,18 @@
                 "title": "Account SAS Token",
                 "name": "sas_token",
                 "type": "password",
+<<<<<<< HEAD
                 "description": "Account Shared Access Signature(SAS) to perform automated operations on Storage Table Service.",
+=======
+                "description": "Account Shared Access Signature(SAS) to perform automated operations on Storage Table Service. To get an SAS, refer to section.",
+>>>>>>> origin/develop
                 "tooltip": "Account Shared Access Signature(SAS) to perform automated operations on Storage Table Service.",
                 "required": true,
                 "editable": true,
                 "visible": true
             },
             {
+<<<<<<< HEAD
                 "title": "Container Name",
                 "required": true,
                 "editable": true,
@@ -41,6 +46,8 @@
                 "description": "Specify the name of the azure container."
             },
             {
+=======
+>>>>>>> origin/develop
                 "title": "Verify SSL",
                 "required": false,
                 "editable": true,
@@ -49,16 +56,35 @@
                 "name": "verify_ssl",
                 "value": true,
                 "description": "Specifies whether the SSL certificate for the server is to be verified or not.\nBy default, this option is set to True."
+<<<<<<< HEAD
+=======
+            },
+            {
+                "title": "Container Name",
+                "required": true,
+                "editable": true,
+                "visible": true,
+                "type": "text",
+                "name": "container_name",
+                "description": "Specify the name of the azure container."
+>>>>>>> origin/develop
             }
         ]
     },
     "operations": [
         {
             "title": "Put Blob",
+<<<<<<< HEAD
             "description": "The Put Blob operation creates a new block, page, or append blob, or updates the content of an existing block blob.",
             "operation": "create_or_update_blob",
             "category": "investigation",
             "annotation": "create_or_update_blob",
+=======
+            "description": "Creates a new blob or replaces an existing blob within a container.",
+            "operation": "create_blob",
+            "category": "investigation",
+            "annotation": "create_blob",
+>>>>>>> origin/develop
             "parameters": [
                 {
                     "title": "Blob Name",
@@ -67,8 +93,13 @@
                     "visible": true,
                     "type": "text",
                     "name": "blob_name",
+<<<<<<< HEAD
                     "tooltip": "Specify the name of the blob.",
                     "description": "Specify the name of the blob to create or update."
+=======
+                    "tooltip": "Specify the name of the blob to create or replace.",
+                    "description": "Specify the name of the blob to create or replace."
+>>>>>>> origin/develop
                 },
                 {
                     "title": "Blob Type",
@@ -82,8 +113,13 @@
                       "PageBlob",
                       "BlockBlob"
                     ],
+<<<<<<< HEAD
                     "tooltip": "Select the type of the blob to create block blob, page blob and append blob.",
                     "description": "Select the type of the blob to create block blob, page blob and append blob."
+=======
+                    "tooltip": "Specify the type of the blob to create block blob, page blob, append blob.",
+                    "description": "Specify the name of the blob to create or replace."
+>>>>>>> origin/develop
                 },
                 {
                     "title": "Blob Data",
@@ -94,7 +130,11 @@
                     "name": "blob_data",
                     "value": "",
                     "tooltip": "Specify the content of the blob. For a page blob or an append blob, the content is empty.",
+<<<<<<< HEAD
                     "description": "Specify the content of the blob. For a page blob or an append blob, the content is empty."
+=======
+                    "description": "Specify the name of the blob to create or replace."
+>>>>>>> origin/develop
                 }
             ]
         },
