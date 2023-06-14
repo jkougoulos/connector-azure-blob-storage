@@ -1,0 +1,249 @@
+{
+  "type": "workflow_collections",
+  "data": [
+    {
+<<<<<<< HEAD
+      "uuid": "7712626c-15d7-48fc-bfd0-589b0d995ea0",
+=======
+      "uuid": "3d361282-cc72-42f8-a7f6-e0a8ad621eda",
+>>>>>>> origin/develop
+      "@type": "WorkflowCollection",
+      "name": "Sample - Azure Storage Blob - 1.0.0",
+      "description": "Azure Blob storage is a service that contains information for operations on block blobs, append blobs, and page blobs. This connector helps you to perform REST operations for working with blobs in the Blob service.",
+      "visible": true,
+      "image": null,
+      "recordTags": [
+        "Azure",
+        "azure-storage-blob"
+      ],
+      "workflows": [
+        {
+          "@type": "Workflow",
+<<<<<<< HEAD
+          "uuid": "15d3ff4e-4379-45be-9037-749702f0771c",
+          "collection": "/api/3/workflow_collections/7712626c-15d7-48fc-bfd0-589b0d995ea0",
+          "triggerLimit": null,
+          "description": "The Put Blob operation creates a new block, page, or append blob, or updates the content of an existing block blob.",
+=======
+          "uuid": "425d83d1-88ae-4c8c-bce1-02676d0747d6",
+          "collection": "/api/3/workflow_collections/3d361282-cc72-42f8-a7f6-e0a8ad621eda",
+          "triggerLimit": null,
+          "description": "Creates a new blob or replaces an existing blob within a container.",
+>>>>>>> origin/develop
+          "name": "Put Blob",
+          "tag": "#Azure Storage Blob",
+          "recordTags": [
+            "Azure",
+            "azure-storage-blob"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+<<<<<<< HEAD
+          "triggerStep": "/api/3/workflow_steps/3538fe77-608e-490e-87e0-73fa0f2fee4b",
+          "steps": [
+            {
+              "uuid": "3538fe77-608e-490e-87e0-73fa0f2fee4b",
+=======
+          "triggerStep": "/api/3/workflow_steps/2cfa1311-bbc8-4f45-9bc9-0171bdb22133",
+          "steps": [
+            {
+              "uuid": "2cfa1311-bbc8-4f45-9bc9-0171bdb22133",
+>>>>>>> origin/develop
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+<<<<<<< HEAD
+                "route": "93ee5daf-242f-4ff8-a60e-ae39f046e399",
+=======
+                "route": "a45e318a-1247-4979-9166-0ec70122e75d",
+>>>>>>> origin/develop
+                "title": "Azure Storage Blob: Put Blob",
+                "resources": [
+                  "alerts"
+                ],
+                "inputVariables": [],
+                "step_variables": {
+                  "input": {
+                    "records": "{{vars.input.records[0]}}"
+                  }
+                },
+                "singleRecordExecution": false,
+                "noRecordExecution": true,
+                "executeButtonText": "Execute"
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
+            },
+            {
+<<<<<<< HEAD
+              "uuid": "a341fa06-efe1-4b96-9eca-4ecb0d09932f",
+=======
+              "uuid": "8439bf5b-8e98-4ec5-9b1b-e353e6685bb7",
+>>>>>>> origin/develop
+              "@type": "WorkflowStep",
+              "name": "Put Blob",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Azure Storage Blob",
+                "config": "''",
+                "params": {
+                  "blob_data": ""
+                },
+                "version": "1.0.0",
+                "connector": "azure-storage-blob",
+<<<<<<< HEAD
+                "operation": "create_or_update_blob",
+=======
+                "operation": "create_blob",
+>>>>>>> origin/develop
+                "operationTitle": "Put Blob",
+                "step_variables": {
+                  "output_data": "{{vars.result}}"
+                }
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "routes": [
+            {
+              "@type": "WorkflowRoute",
+<<<<<<< HEAD
+              "uuid": "eeb8483f-8d2b-4b0e-93b0-35a2b04b095b",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Put Blob",
+              "sourceStep": "/api/3/workflow_steps/3538fe77-608e-490e-87e0-73fa0f2fee4b",
+              "targetStep": "/api/3/workflow_steps/a341fa06-efe1-4b96-9eca-4ecb0d09932f"
+=======
+              "uuid": "0cf1e604-9ce4-4575-b5ef-3064f05d6b5e",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Put Blob",
+              "sourceStep": "/api/3/workflow_steps/2cfa1311-bbc8-4f45-9bc9-0171bdb22133",
+              "targetStep": "/api/3/workflow_steps/8439bf5b-8e98-4ec5-9b1b-e353e6685bb7"
+>>>>>>> origin/develop
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+<<<<<<< HEAD
+          "uuid": "5cd081ba-cc02-423e-bfa0-c439a23503d3",
+          "collection": "/api/3/workflow_collections/7712626c-15d7-48fc-bfd0-589b0d995ea0",
+=======
+          "uuid": "73e47aa8-8768-43a0-af92-e0bc29064196",
+          "collection": "/api/3/workflow_collections/3d361282-cc72-42f8-a7f6-e0a8ad621eda",
+>>>>>>> origin/develop
+          "triggerLimit": null,
+          "description": "The List Blobs operation returns a list of the blobs under the specified container.",
+          "name": "List Blob",
+          "tag": "#Azure Storage Blob",
+          "recordTags": [
+            "Azure",
+            "azure-storage-blob"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+<<<<<<< HEAD
+          "triggerStep": "/api/3/workflow_steps/29a784e6-0c73-4464-9785-db2018ed3d89",
+          "steps": [
+            {
+              "uuid": "29a784e6-0c73-4464-9785-db2018ed3d89",
+=======
+          "triggerStep": "/api/3/workflow_steps/7a451865-4a29-44c3-bb0f-830d4e85d3e6",
+          "steps": [
+            {
+              "uuid": "7a451865-4a29-44c3-bb0f-830d4e85d3e6",
+>>>>>>> origin/develop
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+<<<<<<< HEAD
+                "route": "1a550e3c-29b8-4aac-ba40-9c3d1a2dba67",
+=======
+                "route": "957c904a-52f9-446d-9e34-e43a72d83f75",
+>>>>>>> origin/develop
+                "title": "Azure Storage Blob: List Blob",
+                "resources": [
+                  "alerts"
+                ],
+                "inputVariables": [],
+                "step_variables": {
+                  "input": {
+                    "records": "{{vars.input.records[0]}}"
+                  }
+                },
+                "singleRecordExecution": false,
+                "noRecordExecution": true,
+                "executeButtonText": "Execute"
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
+            },
+            {
+<<<<<<< HEAD
+              "uuid": "9ee614d8-7a3c-4528-be98-3b29ae9bc3a6",
+=======
+              "uuid": "f44cc20c-6c12-4575-a21e-734a0aac91e8",
+>>>>>>> origin/develop
+              "@type": "WorkflowStep",
+              "name": "List Blob",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Azure Storage Blob",
+                "config": "''",
+                "params": [],
+                "version": "1.0.0",
+                "connector": "azure-storage-blob",
+                "operation": "list_blob",
+                "operationTitle": "List Blob",
+                "step_variables": {
+                  "output_data": "{{vars.result}}"
+                }
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "routes": [
+            {
+              "@type": "WorkflowRoute",
+<<<<<<< HEAD
+              "uuid": "b95d58fb-c1ba-4e11-946f-84819739b01f",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> List Blob",
+              "sourceStep": "/api/3/workflow_steps/29a784e6-0c73-4464-9785-db2018ed3d89",
+              "targetStep": "/api/3/workflow_steps/9ee614d8-7a3c-4528-be98-3b29ae9bc3a6"
+=======
+              "uuid": "c5d42fa9-b385-41cf-95e7-88758d0452de",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> List Blob",
+              "sourceStep": "/api/3/workflow_steps/7a451865-4a29-44c3-bb0f-830d4e85d3e6",
+              "targetStep": "/api/3/workflow_steps/f44cc20c-6c12-4575-a21e-734a0aac91e8"
+>>>>>>> origin/develop
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
