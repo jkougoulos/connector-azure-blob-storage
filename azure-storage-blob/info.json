@@ -2,12 +2,12 @@
     "name": "azure-storage-blob",
     "version": "1.0.0",
     "label": "Azure Storage Blob",
-    "description": "Azure Blob storage is a service that contains information for operations on block blobs, append blobs, and page blobs. This connector helps you to perform REST operations for working with blobs in the Blob service.",
+    "description": "Azure Blob Storage is Microsoft's object storage solution for the cloud. Blob Storage is optimized for storing massive amounts of unstructured data. Azure Blob Storage stores text and binary data as objects in the cloud. This connector helps you to perform REST operations for working with blobs in the Blob service.",
     "publisher": "spryIQ.co",
-    "icon_small_name": "azurestorageblob32x32.png",
-    "icon_large_name": "azurestorageblob80x80.png",
+    "icon_small_name": "small.png",
+    "icon_large_name": "large.png",
     "category": "IT Services",
-    "help_online": "https://github.com/bidisha-spryiq/connector-azure-storage-blob/blob/develop/docs/AzureStorageBlobConnectorDoc.md",
+    "help_online": "",
     "cs_approved": false,
     "cs_compatible": true,
     "configuration": {
@@ -25,29 +25,22 @@
                 "title": "Account SAS Token",
                 "name": "sas_token",
                 "type": "password",
-<<<<<<< HEAD
-                "description": "Account Shared Access Signature(SAS) to perform automated operations on Storage Table Service.",
-=======
-                "description": "Account Shared Access Signature(SAS) to perform automated operations on Storage Table Service. To get an SAS, refer to section.",
->>>>>>> origin/develop
-                "tooltip": "Account Shared Access Signature(SAS) to perform automated operations on Storage Table Service.",
+                "description": "Account Shared Access Signature(SAS) to perform automated operations on Storage Blob Service.",
+                "tooltip": "Account Shared Access Signature(SAS) to perform automated operations on Storage Blob Service.",
                 "required": true,
                 "editable": true,
                 "visible": true
             },
             {
-<<<<<<< HEAD
                 "title": "Container Name",
                 "required": true,
                 "editable": true,
                 "visible": true,
                 "type": "text",
                 "name": "container_name",
-                "description": "Specify the name of the azure container."
+                "description": "Specify the name of the azure container within your storage account."
             },
             {
-=======
->>>>>>> origin/develop
                 "title": "Verify SSL",
                 "required": false,
                 "editable": true,
@@ -56,35 +49,21 @@
                 "name": "verify_ssl",
                 "value": true,
                 "description": "Specifies whether the SSL certificate for the server is to be verified or not.\nBy default, this option is set to True."
-<<<<<<< HEAD
-=======
-            },
-            {
-                "title": "Container Name",
-                "required": true,
-                "editable": true,
-                "visible": true,
-                "type": "text",
-                "name": "container_name",
-                "description": "Specify the name of the azure container."
->>>>>>> origin/develop
             }
         ]
     },
     "operations": [
         {
             "title": "Put Blob",
-<<<<<<< HEAD
-            "description": "The Put Blob operation creates a new block, page, or append blob, or updates the content of an existing block blob.",
-            "operation": "create_or_update_blob",
-            "category": "investigation",
-            "annotation": "create_or_update_blob",
-=======
             "description": "Creates a new blob or replaces an existing blob within a container.",
             "operation": "create_blob",
             "category": "investigation",
             "annotation": "create_blob",
->>>>>>> origin/develop
+            "output_schema": {
+                "status": "",
+                "message": ""
+            },
+            "enabled": true,
             "parameters": [
                 {
                     "title": "Blob Name",
@@ -93,48 +72,30 @@
                     "visible": true,
                     "type": "text",
                     "name": "blob_name",
-<<<<<<< HEAD
-                    "tooltip": "Specify the name of the blob.",
-                    "description": "Specify the name of the blob to create or update."
-=======
                     "tooltip": "Specify the name of the blob to create or replace.",
                     "description": "Specify the name of the blob to create or replace."
->>>>>>> origin/develop
                 },
                 {
-                    "title": "Blob Type",
-                    "required": true,
-                    "editable": true,
-                    "visible": true,
-                    "type": "select",
-                    "name": "blob_type",
-                    "options": [
-                      "AppendBlob",
-                      "PageBlob",
-                      "BlockBlob"
-                    ],
-<<<<<<< HEAD
-                    "tooltip": "Select the type of the blob to create block blob, page blob and append blob.",
-                    "description": "Select the type of the blob to create block blob, page blob and append blob."
-=======
-                    "tooltip": "Specify the type of the blob to create block blob, page blob, append blob.",
-                    "description": "Specify the name of the blob to create or replace."
->>>>>>> origin/develop
-                },
-                {
-                    "title": "Blob Data",
-                    "required": false,
-                    "editable": true,
-                    "visible": true,
+                    "name": "value",
+                    "title": "File Attachment/IRI Reference",
                     "type": "text",
-                    "name": "blob_data",
-                    "value": "",
-                    "tooltip": "Specify the content of the blob. For a page blob or an append blob, the content is empty.",
-<<<<<<< HEAD
-                    "description": "Specify the content of the blob. For a page blob or an append blob, the content is empty."
-=======
-                    "description": "Specify the name of the blob to create or replace."
->>>>>>> origin/develop
+                    "editable": true,
+                    "visible": true,
+                    "required": true,
+                    "description": "File Attachment/IRI Reference that is used to access the attachment metadata from the FortiSOAR™ Attachments module. In the playbook, if you select 'Attachment ID', this defaults to the {{vars.attachment_id}} value or if you select 'File IRI', then this defaults to the {{vars.file_iri}} value."
+                },
+                {
+                    "name": "input",
+                    "title": "Type",
+                    "type": "select",
+                    "options": [
+                      "Attachment ID",
+                      "File IRI"
+                    ],
+                    "editable": true,
+                    "visible": true,
+                    "required": true,
+                    "description": "Choose between Attachment ID or a File IRI."
                 }
             ]
         },
@@ -144,6 +105,41 @@
             "operation": "list_blob",
             "category": "investigation",
             "annotation": "list_blob",
+            "output_schema": {
+                "EnumerationResults": {
+                    "@ServiceEndpoint": "",
+                    "@ContainerName": "",
+                    "Blobs": {
+                        "Blob": [
+                            {
+                                "Name": "",
+                                "Properties": {
+                                    "Creation-Time": "",
+                                    "Last-Modified": "",
+                                    "Etag": "",
+                                    "Content-Length": "",
+                                    "Content-Type": "",
+                                    "Content-Encoding": "",
+                                    "Content-Language": "",
+                                    "Content-CRC64": "",
+                                    "Content-MD5": "",
+                                    "Cache-Control": "",
+                                    "Content-Disposition": "",
+                                    "BlobType": "",
+                                    "AccessTier": "",
+                                    "AccessTierInferred": "",
+                                    "LeaseStatus": "",
+                                    "LeaseState": "",
+                                    "ServerEncrypted": ""
+                                },
+                                "OrMetadata": ""
+                            }
+                        ]
+                    },
+                    "NextMarker": ""
+                }
+            },
+            "enabled": true,
             "parameters": []
         }
     ]
