@@ -7,7 +7,7 @@
     "icon_small_name": "small.png",
     "icon_large_name": "large.png",
     "category": "IT Services",
-    "help_online": "",
+    "help_online": "https://github.com/fortinet-fortisoar/connector-azure-storage-blob/blob/release/1.0.0/docs/AzureStorageBlobConnectorDoc.md",
     "cs_approved": false,
     "cs_compatible": true,
     "configuration": {
@@ -101,7 +101,7 @@
         },
         {
             "title": "List Blob",
-            "description": "The List Blobs operation returns a list of the blobs under the specified container.",
+            "description": "The List Blob operation returns a list of the blobs under the specified container.",
             "operation": "list_blob",
             "category": "investigation",
             "annotation": "list_blob",
