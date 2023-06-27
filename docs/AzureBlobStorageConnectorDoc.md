@@ -1,6 +1,6 @@
 ## About the connector
 Azure Blob Storage is Microsoft's object storage solution for the cloud. Blob Storage is optimized for storing massive amounts of unstructured data. Azure Blob Storage stores text and binary data as objects in the cloud. This connector helps you to perform REST operations for working with blobs in the Blob service.
-<p>This document provides information about the Azure Storage Blob Connector, which facilitates automated interactions, with a Azure Storage Blob server using FortiSOAR&trade; playbooks. Add the Azure Storage Blob Connector as a step in FortiSOAR&trade; playbooks and perform automated operations with Azure Storage Blob.</p>
+<p>This document provides information about the Azure Blob Storage Connector, which facilitates automated interactions, with a Azure Blob Storage Blob server using FortiSOAR&trade; playbooks. Add the Azure Blob Storage Connector as a step in FortiSOAR&trade; playbooks and perform automated operations with Azure Blob Storage.</p>
 
 ### Version information
 
@@ -12,11 +12,11 @@ Authored By: spryIQ.co
 Certified: No
 ## Installing the connector
 <p>From FortiSOAR&trade; 5.0.0 onwards, use the <strong>Connector Store</strong> to install the connector. For the detailed procedure to install a connector, click <a href="https://docs.fortinet.com/document/fortisoar/0.0.0/installing-a-connector/1/installing-a-connector" target="_top">here</a>.<br>You can also use the following <code>yum</code> command as a root user to install connectors from an SSH session:</p>
-`yum install cyops-connector-azure-storage-blob`
+`yum install cyops-connector-azure-blob-storage`
 
 ## Prerequisites to configuring the connector
 - You must have the Azure Storage Account Name, SAS Token and Container Name to perform automated operations.
-- The FortiSOAR&trade; server should have outbound connectivity to port 443 on the Azure Storage Blob server.
+- The FortiSOAR&trade; server should have outbound connectivity to port 443 on the Azure Blob Storage server.
 
 ## Minimum Permissions Required
 - N/A
@@ -24,9 +24,9 @@ Certified: No
 ## Configuring the connector
 For the procedure to configure a connector, click [here](https://docs.fortinet.com/document/fortisoar/0.0.0/configuring-a-connector/1/configuring-a-connector)
 ### Configuration parameters
-<p>In FortiSOAR&trade;, on the Connectors page, click the <strong>Azure Storage Blob</strong> connector row (if you are in the <strong>Grid</strong> view on the Connectors page) and in the <strong>Configurations&nbsp;</strong> tab enter the required configuration details:&nbsp;</p>
+<p>In FortiSOAR&trade;, on the Connectors page, click the <strong>Azure Blob Storage</strong> connector row (if you are in the <strong>Grid</strong> view on the Connectors page) and in the <strong>Configurations&nbsp;</strong> tab enter the required configuration details:&nbsp;</p>
 <table border=1><thead><tr><th>Parameter<br></th><th>Description<br></th></tr></thead><tbody><tr><td>Storage Account Name<br></td><td>Name of the storage account from which you want to perform the automated operations.<br>
-<tr><td>Account SAS Token<br></td><td>Account Shared Access Signature(SAS) to perform automated operations on Storage Blob Service.<br>
+<tr><td>Account SAS Token<br></td><td>Account Shared Access Signature(SAS) to perform automated operations on Blob Storage Service.<br>
 <tr><td>Container Name<br></td><td>Specify the name of the azure container within your storage account.<br>
 <tr><td>Verify SSL<br></td><td>Specifies whether the SSL certificate for the server is to be verified or not. <br/>By default, this option is set as True.<br></td></tr>
 </tbody></table>
@@ -90,7 +90,7 @@ None.
     }
 }
 ## Included playbooks
-The `Sample - azure-storage-blob - 1.0.0` playbook collection comes bundled with the Azure Storage Blob connector. These playbooks contain steps using which you can perform all supported actions. You can see bundled playbooks in the **Automation** > **Playbooks** section in FortiSOAR<sup>TM</sup> after importing the Azure Storage Blob connector.
+The `Sample - azure-blob-storage - 1.0.0` playbook collection comes bundled with the Azure Blob Storage connector. These playbooks contain steps using which you can perform all supported actions. You can see bundled playbooks in the **Automation** > **Playbooks** section in FortiSOAR<sup>TM</sup> after importing the Azure Blob Storage connector.
 
 - List Blob
 - Put Blob

@@ -3,44 +3,44 @@
   "data": [
     {
       "@type": "WorkflowCollection",
-      "name": "Sample - Azure Storage Blob - 1.0.0",
+      "name": "Sample - Azure Blob Storage - 1.0.0",
       "description": "Azure Blob Storage is Microsoft's object storage solution for the cloud. Blob Storage is optimized for storing massive amounts of unstructured data. Azure Blob Storage stores text and binary data as objects in the cloud. This connector helps you to perform REST operations for working with blobs in the Blob service.",
       "visible": true,
       "image": null,
-      "uuid": "1d21f476-6937-4106-92f9-0ef9513addd7",
-      "id": 359,
+      "uuid": "af99f462-6274-4b54-81e6-5e16a5a5c890",
+      "id": 368,
       "deletedAt": null,
       "importedBy": [],
       "recordTags": [
         "Azure",
-        "azure-storage-blob"
+        "azure-blob-storage"
       ],
       "workflows": [
         {
           "@type": "Workflow",
           "triggerLimit": null,
-          "name": "Put Blob",
+          "name": "List Blob",
           "aliasName": null,
-          "tag": "#Azure Storage Blob",
-          "description": "Creates a new blob or replaces an existing blob within a container.",
+          "tag": "#Azure Blob Storage",
+          "description": "The List Blob operation returns a list of the blobs under the specified container.",
           "isActive": false,
           "debug": false,
           "singleRecordExecution": false,
           "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
-          "lastModifyDate": 1687167369,
-          "collection": "/api/3/workflow_collections/1d21f476-6937-4106-92f9-0ef9513addd7",
+          "lastModifyDate": 1687336484,
+          "collection": "/api/3/workflow_collections/af99f462-6274-4b54-81e6-5e16a5a5c890",
           "versions": [],
-          "triggerStep": "/api/3/workflow_steps/431bac5c-6ab1-4d38-9c16-844a20a1a9e2",
+          "triggerStep": "/api/3/workflow_steps/2b14a061-4b59-4fcd-822a-44adc89ed991",
           "steps": [
             {
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "arguments": {
-                "route": "87b20cec-69dc-4d3a-9210-fcbf8586dcc6",
-                "title": "Azure Storage Blob: Put Blob",
+                "route": "c9783c34-b224-4ffc-964d-4b034cbb2559",
+                "title": "Azure Blob Storage: List Blob",
                 "resources": [
                   "alerts"
                 ],
@@ -59,81 +59,18 @@
               "left": "20",
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
               "group": null,
-              "uuid": "431bac5c-6ab1-4d38-9c16-844a20a1a9e2"
+              "uuid": "2b14a061-4b59-4fcd-822a-44adc89ed991"
             },
-            {
-              "@type": "WorkflowStep",
-              "name": "Put Blob",
-              "description": null,
-              "arguments": {
-                "name": "Azure Storage Blob",
-                "config": "''",
-                "params": [],
-                "version": "1.0.0",
-                "connector": "azure-storage-blob",
-                "operation": "create_blob",
-                "operationTitle": "Put Blob"
-              },
-              "status": null,
-              "top": "120",
-              "left": "188",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
-              "group": null,
-              "uuid": "e39ad808-adc9-4a18-9972-ad14670e8f22"
-            }
-          ],
-          "routes": [
-            {
-              "@type": "WorkflowRoute",
-              "name": "Start-> Put Blob",
-              "targetStep": "/api/3/workflow_steps/e39ad808-adc9-4a18-9972-ad14670e8f22",
-              "sourceStep": "/api/3/workflow_steps/431bac5c-6ab1-4d38-9c16-844a20a1a9e2",
-              "label": null,
-              "isExecuted": false,
-              "uuid": "32e347af-6e68-4fba-9d52-f17b3c38ecdf"
-            }
-          ],
-          "groups": [],
-          "priority": null,
-          "uuid": "4928630a-515f-4875-a6fa-142c0f5161d1",
-          "id": 4617,
-          "owners": [],
-          "isPrivate": false,
-          "deletedAt": null,
-          "importedBy": [],
-          "recordTags": [
-            "Azure",
-            "azure-storage-blob"
-          ]
-        },
-        {
-          "@type": "Workflow",
-          "triggerLimit": null,
-          "name": "List Blob",
-          "aliasName": null,
-          "tag": "#Azure Storage Blob",
-          "description": "The List Blobs operation returns a list of the blobs under the specified container.",
-          "isActive": false,
-          "debug": false,
-          "singleRecordExecution": false,
-          "remoteExecutableFlag": false,
-          "parameters": [],
-          "synchronous": false,
-          "lastModifyDate": 1687167369,
-          "collection": "/api/3/workflow_collections/1d21f476-6937-4106-92f9-0ef9513addd7",
-          "versions": [],
-          "triggerStep": "/api/3/workflow_steps/1a87eb43-098b-4ab3-92a7-d53971ee3ab3",
-          "steps": [
             {
               "@type": "WorkflowStep",
               "name": "List Blob",
               "description": null,
               "arguments": {
-                "name": "Azure Storage Blob",
+                "name": "Azure Blob Storage",
                 "config": "''",
                 "params": [],
                 "version": "1.0.0",
-                "connector": "azure-storage-blob",
+                "connector": "azure-blob-storage",
                 "operation": "list_blob",
                 "operationTitle": "List Blob"
               },
@@ -142,15 +79,78 @@
               "left": "188",
               "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
               "group": null,
-              "uuid": "0db32a74-7ce8-45ab-9219-b876ed2c7eaa"
+              "uuid": "55ca4871-070c-462b-a1d3-ebcbff4154e0"
+            }
+          ],
+          "routes": [
+            {
+              "@type": "WorkflowRoute",
+              "name": "Start-> List Blob",
+              "targetStep": "/api/3/workflow_steps/55ca4871-070c-462b-a1d3-ebcbff4154e0",
+              "sourceStep": "/api/3/workflow_steps/2b14a061-4b59-4fcd-822a-44adc89ed991",
+              "label": null,
+              "isExecuted": false,
+              "uuid": "c0a8274b-c191-4f4a-8366-f220b58c7a30"
+            }
+          ],
+          "groups": [],
+          "priority": null,
+          "uuid": "615dfeaa-9157-47df-919a-e67d5781f809",
+          "id": 4694,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
+          "recordTags": [
+            "Azure",
+            "azure-blob-storage"
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "triggerLimit": null,
+          "name": "Put Blob",
+          "aliasName": null,
+          "tag": "#Azure Blob Storage",
+          "description": "Creates a new blob or replaces an existing blob within a container.",
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "remoteExecutableFlag": false,
+          "parameters": [],
+          "synchronous": false,
+          "lastModifyDate": 1687336484,
+          "collection": "/api/3/workflow_collections/af99f462-6274-4b54-81e6-5e16a5a5c890",
+          "versions": [],
+          "triggerStep": "/api/3/workflow_steps/731a17a1-eac9-49fa-9b3f-34b6db92ed22",
+          "steps": [
+            {
+              "@type": "WorkflowStep",
+              "name": "Put Blob",
+              "description": null,
+              "arguments": {
+                "name": "Azure Blob Storage",
+                "config": "''",
+                "params": [],
+                "version": "1.0.0",
+                "connector": "azure-blob-storage",
+                "operation": "create_blob",
+                "operationTitle": "Put Blob"
+              },
+              "status": null,
+              "top": "120",
+              "left": "188",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "4cc3a644-aff9-4116-8bc4-e817e4e00a73"
             },
             {
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "arguments": {
-                "route": "9beb1247-4639-4157-8724-8f134a6b71e1",
-                "title": "Azure Storage Blob: List Blob",
+                "route": "fc4e61ea-c6ad-4b2b-8d7d-6067922d8985",
+                "title": "Azure Blob Storage: Put Blob",
                 "resources": [
                   "alerts"
                 ],
@@ -169,31 +169,31 @@
               "left": "20",
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
               "group": null,
-              "uuid": "1a87eb43-098b-4ab3-92a7-d53971ee3ab3"
+              "uuid": "731a17a1-eac9-49fa-9b3f-34b6db92ed22"
             }
           ],
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "name": "Start-> List Blob",
-              "targetStep": "/api/3/workflow_steps/0db32a74-7ce8-45ab-9219-b876ed2c7eaa",
-              "sourceStep": "/api/3/workflow_steps/1a87eb43-098b-4ab3-92a7-d53971ee3ab3",
+              "name": "Start-> Put Blob",
+              "targetStep": "/api/3/workflow_steps/4cc3a644-aff9-4116-8bc4-e817e4e00a73",
+              "sourceStep": "/api/3/workflow_steps/731a17a1-eac9-49fa-9b3f-34b6db92ed22",
               "label": null,
               "isExecuted": false,
-              "uuid": "b37d3005-7f62-4aef-9e65-7565516f8822"
+              "uuid": "b580593e-c600-442e-ab0b-3fa667ca1ebc"
             }
           ],
           "groups": [],
           "priority": null,
-          "uuid": "b5b859ff-133e-472a-9cb0-85bbc7df1a75",
-          "id": 4618,
+          "uuid": "a1f0f1d7-9605-428c-9c2a-32352d0a6fae",
+          "id": 4693,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
           "importedBy": [],
           "recordTags": [
             "Azure",
-            "azure-storage-blob"
+            "azure-blob-storage"
           ]
         }
       ]
@@ -201,6 +201,6 @@
   ],
   "exported_tags": [
     "Azure",
-    "azure-storage-blob"
+    "azure-blob-storage"
   ]
 }

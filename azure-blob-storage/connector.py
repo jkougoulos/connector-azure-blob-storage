@@ -7,10 +7,10 @@
 from connectors.core.connector import Connector, get_logger, ConnectorError
 from .operations import operations, _check_health
 
-logger = get_logger('azure-storage-blob')
+logger = get_logger('azure-blob-storage')
 
 
-class AzureStorageBlob(Connector):
+class AzureBlobStorage(Connector):
     def execute(self, config, operation, params, **kwargs):
         try:
             connector_info = {"connector_name": self._info_json.get('name'),

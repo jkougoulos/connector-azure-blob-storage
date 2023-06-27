@@ -11,7 +11,7 @@ from os.path import join
 from connectors.cyops_utilities.builtins import download_file_from_cyops
 from integrations.crudhub import make_request
 
-logger = get_logger('azure-storage-blob')
+logger = get_logger('azure-blob-storage')
 
 STORAGE_SERVICE_ENDPOINT = ".blob.core.windows.net"
 
