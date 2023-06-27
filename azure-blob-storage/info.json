@@ -1,13 +1,13 @@
 {
-    "name": "azure-storage-blob",
+    "name": "azure-blob-storage",
     "version": "1.0.0",
-    "label": "Azure Storage Blob",
+    "label": "Azure Blob Storage",
     "description": "Azure Blob Storage is Microsoft's object storage solution for the cloud. Blob Storage is optimized for storing massive amounts of unstructured data. Azure Blob Storage stores text and binary data as objects in the cloud. This connector helps you to perform REST operations for working with blobs in the Blob service.",
     "publisher": "spryIQ.co",
     "icon_small_name": "small.png",
     "icon_large_name": "large.png",
     "category": "IT Services",
-    "help_online": "https://github.com/fortinet-fortisoar/connector-azure-storage-blob/blob/release/1.0.0/docs/AzureStorageBlobConnectorDoc.md",
+    "help_online": "https://github.com/fortinet-fortisoar/connector-azure-blob-storage/blob/release/1.0.0/docs/AzureBlobStorageConnectorDoc.md",
     "cs_approved": false,
     "cs_compatible": true,
     "configuration": {
@@ -25,8 +25,8 @@
                 "title": "Account SAS Token",
                 "name": "sas_token",
                 "type": "password",
-                "description": "Account Shared Access Signature(SAS) to perform automated operations on Storage Blob Service.",
-                "tooltip": "Account Shared Access Signature(SAS) to perform automated operations on Storage Blob Service.",
+                "description": "Account Shared Access Signature(SAS) to perform automated operations on Blob Storage Service.",
+                "tooltip": "Account Shared Access Signature(SAS) to perform automated operations on Blob Storage Service.",
                 "required": true,
                 "editable": true,
                 "visible": true

@@ -1,1 +1,1 @@
-# connector-azure-storage-blob
+# connector-azure-blob-storage
