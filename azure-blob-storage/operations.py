@@ -96,8 +96,8 @@ def put_blob(config, params, connector_info):
     file_iri = handle_params(params)
     files = submitFile(file_iri)
     headers["x-ms-blob-type"] = "BlockBlob"
-    endpoint = f"https://{config.get('account_name')}{STORAGE_SERVICE_ENDPOINT}/{config.get('container_name')}/{params.get('blob_name')}{config.get('sas_token')}"
-    response = api_request("PUT", endpoint, connector_info, data=files, headers=headers)
+    endpoint = f"https://{config.get('account_name')}{STORAGE_SERVICE_ENDPOINT}/{config.get('container_name')}/{params.get('blob_name')}?{config.get('sas_token')}"
+    response = api_request("PUT", endpoint, connector_info, data=files['file'], headers=headers)
     return "Successfully Created"
 
 
